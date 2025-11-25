@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona API Viewer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Corona Virus Tracker</h1>
+            <p class="subtitle">Real-time COVID-19 statistics by region</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="selector-container">
+                    <label for="stateSelect">Select a State/Region:</label>
+                    <select id="stateSelect" onchange="displayStateData()">
+                        <option value="">-- Select a State --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="loading" class="loading">Loading data...</div>
+            
+            <div id="statsContainer" class="stats-container" style="display: none;">
+                <div class="stat-card confirmed">
+                    <div class="stat-title">Confirmed Cases</div>
+                    <div id="confirmed" class="stat-value">--</div>
+                </div>
+                
+                <div class="stat-card recovered">
+                    <div class="stat-title">Recovered</div>
+                    <div id="recovered" class="stat-value">--</div>
+                </div>
+                
+                <div class="stat-card deaths">
+                    <div class="stat-title">Deaths</div>
+                    <div id="deaths" class="stat-value">--</div>
+                </div>
+            </div>
+            
+            <!-- <div id="updatedInfo" class="updated-info"></div> -->
+        </main>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
